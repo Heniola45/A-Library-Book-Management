@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", system-ui;
+}
+
+:root {
+    /* COLOR VARIABLES */
+    --backgroundColor: #013072;
+    --bigTextColor: #f6f6f6;
+    --outlineColor: #9f9d9d;
+    --smallTextColor: #333333;
+    --buttonColor: #082854;
+    --buttonTextColor: white;
+    --hoverButtonColor: #d8d6da;
+
+
+
+    /* SPACE VARIABLES */
+    --columnGapSpace: 0.75rem;
+    --smallColumnGapSpace: 0.25rem;
+    --rowGapSpace: 3rem;
+    --smallRowGapSpace: 0.75rem;
+    --padding: 4rem;
+    --smallerPadding: 1.3rem;
+    --smallPadding: 1rem;
+    --smallestPadding: 0.5rem; 
+
+}
+
+.card-container {
+    width: 100%;
+    height: auto;
+    padding: var(--padding);
+    background-color: var(--backgroundColor);
+    display: flex;
+    flex-direction: column;  
+    row-gap: var(--rowGapSpace);  
+}
+
+.top-section {
+    justify-content: start;
+    text-align: center;
+}
+
+.top-section .title {
+    color: var(--bigTextColor);
+    text-align: center;
+    margin-bottom: var(--rowGapSpace);
+    
+}
+
+.top-section .sub-title {
+    color: var(--bigTextColor);
+    text-align: center;
+}
+.inputs-detail{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+input[type="text"], input[type="file"], button {
+    width: 100%;
+    height: auto;
+    padding: var(--smallPadding);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--outlineColor);
+    margin-right: 2.5rem;
+    background-color: var(--backgroundColor);
+}
+
+input[type="file"] {
+    color: var(--outlineColor);
+}
+
+button {
+    background-color: var(--bigTextColor);
+    color: var(--backgroundColor);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    height: auto;
+    border: none;
+    outline: none;
+    padding: var(--smallestPadding);
+    border-radius: 0.5rem; 
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: var(--hoverButtonColor);
+}
+
+.bottom-section {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: var(--smallPadding);
+}
+
+
+.book-1 {
+    width: 100%;
+    height: auto;
+    background-color: var(--bigTextColor);
+    padding: var(--smallerPadding);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.book-image {
+    width: 100%;
+    height: auto;
+    background-image: url("./Image/writer-writes-document-journalist-create-storytelling-with-laptop-hands-typing-computer-keyboard-story-writing-concept_53562-9675.jpg");
+    padding: var(--padding);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.5rem;
+}
+
+
+.image-details {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: baseline;
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    
+}
+
+.book-title {
+    color: var(--backgroundColor);
+    font-size: var(--bodyTextSize);
+    margin-top: 0.5rem;
+    row-gap: 5rem;
+}
+
+.image-details p{
+    color: var(--outlineColor);
+    font-size: 0.8rem; 
+}
+
+.book-title {
+    color: var(--backgroundColor);
+    font-size: var(--bodyTextSize);
+}
+
+.author-name {
+    color: var(--outlineColor);
+    font-size: 0.8rem;
+    margin-left: auto; /* Push to the right */
+}
+
+.buttons {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5rem;
+    column-gap: 1rem;
+}
+
+.remove {
+    width: 100%;
+    height: auto;
+    background-color: var(--backgroundColor);
+    color: var(--buttonTextColor);
+    border: none;
+    outline: none;
+    padding: var(--smallerPadding);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.remove:hover {
+    background-color: var(--buttonColor);
+}
